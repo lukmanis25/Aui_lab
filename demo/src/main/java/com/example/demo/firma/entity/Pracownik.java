@@ -1,36 +1,22 @@
 package com.example.demo.firma.entity;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
+import javax.persistence.*;
+@Getter
+@Setter
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@ToString(callSuper = true)
+@EqualsAndHashCode
+@Entity
+@Table(name = "pracownicy")
 public class Pracownik {
+    @Id
     private int id;
     private String imie;
+    @ManyToOne
+    @JoinColumn(name ="szef")
     private Szef szef;
-
-    public Pracownik(int id, String imie, Szef szef) {
-        this.id = id;
-        this.imie = imie;
-        this.szef = szef;
-        szef.pracownicy.add(this);
-    }
-
-
-    public int getId() {
-        return id;
-    }
-
-    public String getImie() {
-        return imie;
-    }
-
-    public Szef getSzef() {
-        return szef;
-    }
-
-    public void setSzef(Szef szef) {
-        this.szef = szef;
-    }
-
-    @Override
-    public String toString() {
-        return "Pracownik(id = " + this.id + ", imie = " + this.imie + ")";
-    }
 }

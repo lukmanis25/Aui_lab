@@ -26,21 +26,31 @@ public class InitializedData {
 
     @PostConstruct
     private synchronized void init() {
-        Szef tomasz = new Szef(1, "Tomasz");
-        Szef adam = new Szef(2, "Adam");
-        Szef michal = new Szef(3, "Michał");
-
-        szefService.create(tomasz);
-        szefService.create(adam);
-        szefService.create(michal);
-
-        pracownikService.create(new Pracownik(1, "Krzyś", tomasz));
-        pracownikService.create(new Pracownik(2, "Bartek", tomasz));
-        pracownikService.create(new Pracownik(3, "Ania", adam));
-        pracownikService.create(new Pracownik(4, "Kuba", adam));
-        pracownikService.create(new Pracownik(5, "Natalia", michal));
-        pracownikService.create(new Pracownik(6, "Łukasz", michal));
 
 
+        Szef tomasz = Szef.builder()
+                .id(1)
+                .imie("Tomasz")
+                .build();
+        Szef adam = Szef.builder()
+                .id(2)
+                .imie("Adam")
+                .build();
+        Szef michal = Szef.builder()
+                .id(1)
+                .imie("Michal")
+                .build();
+
+        szefService.save(tomasz);
+        szefService.save(adam);
+        szefService.save(michal);
+
+        Pracownik szymon = Pracownik.builder()
+                .id(1)
+                .imie("Szymon")
+                .szef(michal)
+                .build();
+
+        pracownikService.save(szymon);
     }
 }
