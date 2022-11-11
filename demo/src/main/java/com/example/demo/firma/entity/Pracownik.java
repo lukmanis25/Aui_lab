@@ -16,6 +16,7 @@ public class Pracownik {
     @Id
     private int id;
     private String imie;
+
     @ManyToOne
     @JoinColumn(name ="szef")
     private Szef szef;

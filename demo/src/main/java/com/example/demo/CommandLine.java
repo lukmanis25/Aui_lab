@@ -32,7 +32,7 @@ public class CommandLine implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("Hello world");
        // characterService.findAll().forEach(System.out::println);
-       // pracownikService.findAll().forEach(System.out::println);
+        pracownikService.findAll().forEach(System.out::println);
         szefService.findAll().forEach(System.out::println);
 
 

@@ -37,7 +37,7 @@ public class InitializedData {
                 .imie("Adam")
                 .build();
         Szef michal = Szef.builder()
-                .id(1)
+                .id(3)
                 .imie("Michal")
                 .build();
 
