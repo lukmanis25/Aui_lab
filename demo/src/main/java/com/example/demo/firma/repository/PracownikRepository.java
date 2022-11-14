@@ -1,9 +1,7 @@
 package com.example.demo.firma.repository;
 
 
-import com.example.demo.Storage;
 import com.example.demo.firma.entity.Pracownik;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
