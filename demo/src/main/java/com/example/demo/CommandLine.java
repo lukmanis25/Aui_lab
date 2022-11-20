@@ -34,6 +34,7 @@ public class CommandLine implements CommandLineRunner {
        // characterService.findAll().forEach(System.out::println);
         pracownikService.findAll().forEach(System.out::println);
         szefService.findAll().forEach(System.out::println);
+        System.out.println(szefService.find(1));
 
 
 

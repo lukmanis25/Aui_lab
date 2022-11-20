@@ -50,7 +50,38 @@ public class InitializedData {
                 .imie("Szymon")
                 .szef(michal)
                 .build();
+        Pracownik natalia = Pracownik.builder()
+                .id(2)
+                .imie("Natalia")
+                .szef(michal)
+                .build();
+        Pracownik piotr = Pracownik.builder()
+                .id(3)
+                .imie("Piotr")
+                .szef(adam)
+                .build();
+        Pracownik patryk = Pracownik.builder()
+                .id(4)
+                .imie("Patryk")
+                .szef(adam)
+                .build();
+        Pracownik krzys = Pracownik.builder()
+                .id(5)
+                .imie("Krzyś")
+                .szef(tomasz)
+                .build();
+        Pracownik bartek = Pracownik.builder()
+                .id(6)
+                .imie("Bartek")
+                .szef(tomasz)
+                .build();
 
         pracownikService.save(szymon);
+        pracownikService.save(natalia);
+        pracownikService.save(patryk);
+        pracownikService.save(piotr);
+        pracownikService.save(krzys);
+        pracownikService.save(bartek);
+
     }
 }

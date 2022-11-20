@@ -10,8 +10,9 @@ import java.util.Optional;
 public interface SzefRepository extends JpaRepository<Szef, String> {
 
 
-    public Optional<Szef> findById(long id);
+    public Optional<Szef> findById(int id);
 
     public List<Szef> findAll();
+
 
 }

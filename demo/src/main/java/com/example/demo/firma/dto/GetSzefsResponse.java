@@ -17,13 +17,13 @@ import java.util.function.Function;
 @EqualsAndHashCode
 public class GetSzefsResponse {
     @Singular
-    private List<String> szefowie;
+    private List<Integer> szefs;
 
     public static Function<Collection<Szef>, GetSzefsResponse> entityToDtoMapper() {
         return pracownicy -> {
             GetSzefsResponseBuilder response = GetSzefsResponse.builder();
             pracownicy.stream()
-                    .map(Pracownik::getImie)
+                    .map(Szef::getId)
                     .forEach(response::szef);
             return response.build();
         };

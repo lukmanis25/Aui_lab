@@ -34,5 +34,7 @@ public class SzefService {
         repository.save(szef);
     }
     public List<Szef> findAll(){ return repository.findAll();}
-    public Optional<Szef> findById(long id) {return repository.findById(id);}
+    public Optional<Szef> find(int id) {return repository.findById(id);}
+    public void delete(Szef szef) { repository.delete(szef);}
+
 }

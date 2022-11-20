@@ -41,7 +41,7 @@ public class GetPracowniksResponse {
 
 
     @Singular
-    private List<PracownikEntry> pracownicy;
+    private List<PracownikEntry> pracowniks;
 
     /**
      * @return mapper for convenient converting entity object to dto object
