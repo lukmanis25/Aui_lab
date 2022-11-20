@@ -36,5 +36,8 @@ public class SzefService {
     public List<Szef> findAll(){ return repository.findAll();}
     public Optional<Szef> find(int id) {return repository.findById(id);}
     public void delete(Szef szef) { repository.delete(szef);}
-
+    @Transactional
+    public void update(Szef szef) {
+        repository.save(szef);
+    }
 }

@@ -30,18 +30,18 @@ public class PracownikService {
     }
 
     @Transactional
-    public void save(Pracownik pracownik) {
-        repository.save(pracownik);
+    public Pracownik save(Pracownik pracownik) {
+        return repository.save(pracownik);
     }
-
-
 
     public List<Pracownik> findAll(){ return repository.findAll();}
     public Optional<Pracownik> find(int id) {return repository.findById(id);}
+    @Transactional
     public void delete(Pracownik pracownik) { repository.delete(pracownik);}
     public List<Pracownik> findAll(Szef szef) {
         return repository.findAllBySzef(szef);
     }
+
 
     public Optional<Pracownik> find(int szef_id, int pracownik_id) {
         Optional<Szef> szef = szefRepository.findById(szef_id);
@@ -50,6 +50,11 @@ public class PracownikService {
         } else {
             return Optional.empty();
         }
+    }
+
+    @Transactional
+    public void update(Pracownik pracownik) {
+        repository.save(pracownik);
     }
 
 }
