@@ -1,0 +1,25 @@
+
+GET http://localhost:8081/api/szefs
+
+###
+
+GET http://localhost:8081/api/szefs/1
+
+###
+POST http://localhost:8081/api/szefs
+Content-Type: application/json
+
+{
+  "id": 4,
+  "imie": "Kacper"
+}
+###
+PUT http://localhost:8081/api/szefs/4
+Content-Type: application/json
+
+{
+  "imie": "Robert"
+}
+
+###
+DELETE http://localhost:8081/api/szefs/4

@@ -1,0 +1,55 @@
+GET http://localhost:8082/api/pracowniks
+
+###
+
+GET http://localhost:8082/api/pracowniks/1
+
+###
+
+GET http://localhost:8082/api/pracowniks/5
+
+###
+
+POST http://localhost:8082/api/pracowniks
+Content-Type: application/json
+
+{
+  "id": 7,
+  "imie": "Andrzej"
+}
+
+###
+
+PUT http://localhost:8082/api/pracowniks/7
+Content-Type: application/json
+
+{
+  "imie": "Robert"
+}
+
+###
+
+DELETE http://localhost:8082/api/pracowniks/1
+
+###
+
+
+GET http://localhost:8082/api/szefs/1/pracowniks
+
+###
+
+GET http://localhost:8082/api/szefs/1/pracowniks/5
+
+###
+
+
+POST http://localhost:8082/api/szefs/1/pracowniks
+Content-Type: application/json
+
+{
+  "id": 9,
+  "imie": "Tomek"
+}
+
+###
+GET http://localhost:8082/api/szefs/1/pracowniks
