@@ -8,6 +8,8 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
+import javax.transaction.Transactional;
+
 @Repository
 public class SzefEventRepository {
 

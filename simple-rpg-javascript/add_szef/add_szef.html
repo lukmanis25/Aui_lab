@@ -1,0 +1,48 @@
+x<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Simple RPG web application"/>
+    <meta name="keywords" content="RPG"/>
+    <meta name="author" content="Michał (psysiu) Wójcik"/>
+    <title>Simple RPG</title>
+    <link rel="stylesheet" href="../styles.css"/>
+    <link rel="stylesheet" href="character_edit.css"/>
+    <script src="../script.js" defer="defer"></script>
+    <script type="module" src="add_szef.js" defer="defer"></script>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <h1>Simple RPG</h1>
+    </header>
+
+    <nav class="navigation-bar">
+        <ul>
+            <li><a href="../index.html">main</a></li>
+            <li><a href="../about/about.html">about</a></li>
+            <li><a href="../user_list/user_list.html">szefs</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-section">
+        <article class="text--justified">
+            <header><h2>Add szef info</h2></header>
+            <form class="character__form" id="addSzefInfoForm">
+                <label for="szefaddname">Name:</label>
+                <input class="ui-control ui-input" id="szefaddname" name="name"/>
+                <label for="szefaddid">id:</label>
+                <input class="ui-control ui-input" id="szefaddid" name="id"/>
+                <input class="ui-control ui-button" type="submit" name="Update"/>
+            </form>
+        </article>
+
+    </section>
+
+    <footer class="footer">
+        <p>Copyright &copy; 2020, Michał (psysiu) Wójcik</p>
+        <p>All character's portraits were created using <a href="http://dmheroes.com">DMHeroes</a> developed by
+            <a href="https://twitter.com/ChristianOesch">Christian Oesch</a>.</p>
+    </footer>
+</div>
+</body>
